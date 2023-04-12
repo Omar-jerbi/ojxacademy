@@ -2,10 +2,11 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function Navbar() {
-    const logged = false
+    // const logged = false
+
     return (
-        <nav className='grid grid-flow-row grid-cols-12 flex items-center h-24 fixed top-0 w-full z-50'>
-            <Link className={'menu' + (logged ? " col-span-5":" col-span-7")} href={"/"}>
+        <nav className='grid grid-flow-row grid-cols-12 flex items-center h-24 fixed top-0 w-full px-2 z-50'>
+            <Link className={"menu col-span-5 max-sm:col-span-7"} href={"/"}>
                 <svg className='max-h-20' id="academy" viewBox="0 0 210 124" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -16,13 +17,18 @@ export default function Navbar() {
             </Link>
 
 
-            <Link className='menu col-span-2 font-bold' href={"/"}>Home</Link>
-            <Link className='menu col-span-2 font-bold' href={"/"}>Profile</Link>
+            <Link className='menu col-span-2 font-bold text-center' href={"/"}>
+                Home<br className='sm:hidden' /> page
+                <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+            </Link>
 
-            {logged &&
-                <Link className='menu col-span-2 font-bold' href={"/"}>Pagamenti</Link>
-            }
+            <div className="col-span-1"></div>
 
+
+            <Link className='menu col-span-2 font-bold text-center' href={"/Studente/Login"}>
+                Area<br className='sm:hidden' /> studenti
+                <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+            </Link>
         </nav>
     )
 }

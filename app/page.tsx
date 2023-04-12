@@ -42,7 +42,10 @@ export default function Home() {
           <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di versioning systems</div>
           <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di Frameworks e librerie</div>
           <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Messa in produzione dei progetti</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Progettazione di Database</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Coding lato server</div>
           <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Possibilità di entrare nel team OJX</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">E molto altro...</div>
         </div>
 
         <div id='cyancircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-sky-400 aspect-square rounded-full bottom-[-25vh] left-[-25vh] z-0 blur-3xl opacity-80"></div>
@@ -51,7 +54,7 @@ export default function Home() {
 
 
 
-      <div className="home infos flex justify-center items-center bg-gradient-to-t from-slate-50 from-0% to-gray-900 to-65%" style={{ minHeight: "100vh" }}>
+      <div className="home infos relative flex justify-center items-center bg-gradient-to-t from-slate-50 from-0% to-gray-900 to-65%" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2 gap-7 max-sm:gap-5">
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-center">
@@ -94,16 +97,18 @@ export default function Home() {
             <div className="my-4 max-sm:my-0"></div>
             Colloquio introduttivo di 30minuti gratuito
             <div className="my-4 max-sm:my-0 "></div>
-            <span className='text-red-900 underline underline-offset-8 leading-8 flex flex-col justify-center items-center gap-3'>
-              <div>
-                Scrivici per maggiori informazioni e per prenotare la tua chiamata!
-              </div>
-              <div>
-                <svg className='h-8 fill-red-900' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
-              </div>
-            </span>
           </div>
         </div>
+
+        <span className='text-red-900 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
+          <div className='font-semibold text-lg max-sm:text-sm'>
+            Scrivici per maggiori informazioni e per prenotare la tua chiamata!
+          </div>
+
+          <div>
+            <svg className='h-6 fill-red-900' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+          </div>
+        </span>
       </div>
 
 
