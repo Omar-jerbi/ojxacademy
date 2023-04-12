@@ -1,0 +1,126 @@
+.homecontainer {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: auto;
+  scroll-snap-type: y mandatory;
+
+  .home {
+    scroll-snap-align: start;
+
+
+    --bg-size: 400%;
+
+    h1 {
+      --color-zero: rgba(0, 0, 0, 0.459);
+      --color-one: hsl(0, 0%, 100%);
+      --color-two: hsl(229, 80%, 40%);
+      --color-three: hsl(281, 100%, 40%);
+      --color-four: hsl(12, 100%, 50%);
+      background: linear-gradient(90deg,
+          var(--color-zero),
+          var(--color-one),
+          var(--color-two),
+          var(--color-three),
+          var(--color-four),
+          var(--color-zero)) 0 0 / var(--bg-size) 100%;
+
+
+      font-size: max(10cqmin, 4.5rem);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 0.4px white;
+
+      background-size: 20% 100%;
+      background-repeat: no-repeat;
+      background-position-x: -30%;
+
+      animation: move-bg 5s infinite ease-in-out alternate;
+
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .boujee-text {
+        animation: move-bg 5s linear infinite;
+      }
+
+      @keyframes move-bg {
+        to {
+          background-position-x: 120%;
+        }
+      }
+    }
+  }
+
+  .pres {
+    background-image: url(../public/bg1.jpg);
+    background-size: cover;
+  }
+
+  .goals {
+    background: linear-gradient(90deg,
+        rgb(51, 2, 2),
+        rgb(22, 0, 0));
+
+    .wrapper {
+      margin-top: 20px;
+    }
+
+    #cyancircle {
+      scale: 1.5;
+      animation: circlecolor 5s ease-in-out 0s infinite alternate;
+    }
+
+    #purplecircle {
+      scale: 1.5;
+      animation: circlecolor2 5s ease-in-out 500ms infinite alternate;
+    }
+
+    @keyframes circlecolor {
+      to {
+        background-color: purple;
+        bottom: 0%;
+        left: 0;
+        scale: 1;
+      }
+    }
+
+    @keyframes circlecolor2 {
+      to {
+        background-color: cyan;
+        top: 0%;
+        right: 0;
+        scale: 0.8;
+      }
+    }
+  }
+
+
+  .infos{
+    #price{
+      filter: drop-shadow(0 0 2px #22c55ee8);
+    }
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.homecontainer {
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a000 #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+.homecontainer::-webkit-scrollbar {
+  width: 0px;
+}
+
+.homecontainer::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+.homecontainer::-webkit-scrollbar-thumb {
+  background-color: #8f54a000;
+  border-radius: 0px;
+  border: 0px solid #ffffff00;
+}

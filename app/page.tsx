@@ -1,124 +1,120 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import './Home.scss';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="homecontainer">
+
+      <div className="home bg-black flex justify-center items-center" style={{ minHeight: "100vh" }}>
+        <div className="tit">
+          <h1 className="font-semibold">Impara l'arte dello sviluppo web!</h1>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+
+      <div className="home pres flex justify-center items-center" style={{ minHeight: "100vh" }}>
+        <div className="wrapper w-10/12 mx-auto  h-[70vh] relative">
+          <div className="hover:z-10 drop-shadow-md rounded-md first w-4/6 h-[40vh] border-2 border-black bg-white text-black absolute top-0 left-0 flex justify-center items-center overflow-y-auto py-3 px-3 : max-sm:items-start">
+            <label>
+              OJXacademy offre lezioni di sviluppo web altamente personalizzate per adattarsi alle tue esigenze. Verrai seguito da un gruppo di professionisti del settore che ti insegneranno le basi della programmazione di siti internet oltre ai vari trucchi del mestiere che ti aiuterannoa realizzare i tuoi progetti.
+              <br />
+              Le lezioni avvengono in modalita smart su Discord. Potrai scegliere una delle dua modalita di partecipazione: Individuale o in gruppo.
+            </label>
+          </div>
+
+          <div className="hover:z-10 drop-shadow-md rounded-md second w-4/6 h-[40vh] border-2 border-white bg-black text-white absolute bottom-0 right-0 flex justify-center items-center overflow-y-auto py-3 px-3 max-sm:items-start">
+            <label>
+              Oltre alle lezioni, ti verranno assegnati progetti inerenti alle sezioni apprese durante il corso la cui realizzazione ti aiuterà a sviluppare ulteriormente le tue competenze da sviluppatore web.
+            </label>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <div className="home goals flex justify-center items-center relative overflow-hidden" style={{ minHeight: "100vh" }}>
+        <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-3 gap-5 z-10">
+          <div className="tit col-span-3 text-lg text-center">Cosa ti fornirà OJXacademy:</div>
+          <hr className="col-span-3 border-0 outline-none bg-gradient-to-l from-transparent via-white to-transparent" style={{ height: "1px" }} />
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Fondamenta di Html, Css, Js e molto altri</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Design di interfacce web responsive</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Terminologia tecnica</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Sviluppo basato su componenti</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Utilizzo di tools per la progettazione</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di versioning systems</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di Frameworks e librerie</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Messa in produzione dei progetti</div>
+          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Possibilità di entrare nel team OJX</div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div id='cyancircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-sky-400 aspect-square rounded-full bottom-[-25vh] left-[-25vh] z-0 blur-3xl opacity-80"></div>
+        <div id='purplecircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-purple-400 aspect-square rounded-full top-[-25vh] right-[-25vh] z-0 blur-3xl opacity-60"></div>
       </div>
-    </main>
+
+
+
+      <div className="home infos flex justify-center items-center bg-gradient-to-t from-slate-50 from-0% to-gray-900 to-65%" style={{ minHeight: "100vh" }}>
+        <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2 gap-7 max-sm:gap-5">
+          <div className="col-span-1 max-lg:col-span-2">
+            <div className="text-center">
+              <div className="tit text-4xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni in gruppo</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>149€</span></div>
+              <div className="val font-semibold text-sm max-sm:text-xs">
+                Gruppi di 3 persone (+ istruttore)
+                <div className="my-4 max-sm:my-0"></div>
+                Esercizi adeguati alle skills del gruppo
+                <div className="my-4 max-sm:my-0"></div>
+                Orari delle lezioni da concordare insieme agli altri membri
+                <div className="my-4 max-sm:my-0"></div>
+                Consigliato a chi ha già una minima esperienza di programmazione e vuole apprendere nuove skills
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 max-lg:col-span-2">
+            <div className="text-center">
+              <div className="tit text-4xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni individuali</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>249€</span></div>
+              <div className="val font-semibold text-sm max-sm:text-xs">
+                Un solo studente per lezione (+ istruttore)
+                <div className="my-4 max-sm:my-0"></div>
+                Esercizi calibrati su livello individuale
+                <div className="my-4 max-sm:my-0"></div>
+                Maggiore flessibilita negli orari delle lezioni
+                <div className="my-4 max-sm:my-0"></div>
+                Consigliato a chi si approccia per la primissima volta al mondo della programmazione
+              </div>
+            </div>
+          </div>
+
+          <hr className='col-span-2 border-0 outline-none bg-gradient-to-r from-transparent via-green-500 to-transparent' style={{ height: "1px" }} />
+
+          <div className="col-span-2 text-center font-semibold text-lg max-sm:text-sm">
+            2 lezioni settimanali della durata di 180minuti
+            <div className="my-4 max-sm:my-0"></div>
+            Micro-progetti settimanali mirati
+            <div className="my-4 max-sm:my-0"></div>
+            24 ore di lezioni + 4 micro-progetti ogni mese
+            <div className="my-4 max-sm:my-0"></div>
+            Colloquio introduttivo di 30minuti gratuito
+            <div className="my-4 max-sm:my-0 "></div>
+            <span className='text-red-900 underline underline-offset-8 leading-8 flex flex-col justify-center items-center gap-3'>
+              <div>
+                Scrivici per maggiori informazioni e per prenotare la tua chiamata!
+              </div>
+              <div>
+                <svg className='h-8 fill-red-900' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div className="home bg-black flex justify-center items-center" style={{ minHeight: "100vh" }}>
+        <div className="tit">
+          <h1 className="font-semibold">Impara l'arte dello sviluppo web!</h1>
+        </div>
+      </div>
+
+
+    </div>
   )
 }
