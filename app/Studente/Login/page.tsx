@@ -3,10 +3,13 @@
 import Link from "next/link";
 import './Login.scss'
 import { MouseEvent, useState } from "react";
+import { UseUserContext } from "@/app/contexts/userContext";
 
 
 
 export default function () {
+    const { user, setUser } = UseUserContext()
+
     const [i, si] = useState({
         mail: '',
         pw: ''
@@ -20,6 +23,9 @@ export default function () {
     const handleClick = (e: MouseEvent) => {
         if (i.mail == '' || i.pw == '')
             e.preventDefault()
+        else {
+            setUser(9999)
+        }
     }
 
     return (

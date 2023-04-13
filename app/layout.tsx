@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar/Navbar'
+import { UserContextProvider } from './contexts/userContext'
 import './globals.css'
 
 export const metadata = {
@@ -14,11 +15,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='text-white'>
-        <Navbar />
+        
+        <UserContextProvider>
+          <Navbar />
 
-        <main>
-          {children}
-        </main>
+          <main>
+            {children}
+          </main>
+        </UserContextProvider>
 
       </body>
     </html>

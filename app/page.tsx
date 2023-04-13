@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className="home pres flex justify-center items-center" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto  h-[70vh] relative">
-          <div className="hover:z-10 drop-shadow-md rounded-md first w-4/6 h-[40vh] border-2 border-black bg-white text-black absolute top-0 left-0 flex justify-center items-center overflow-y-auto py-3 px-3 : max-sm:items-start">
+          <div className="transition-all hover:z-10 hover:scale-105 drop-shadow-md rounded-md first w-4/6 h-[40vh] border-2 border-black bg-white text-black absolute top-0 left-0 flex justify-center items-center overflow-y-auto py-3 px-3 : max-sm:items-start">
             <label>
               OJXacademy offre lezioni di sviluppo web altamente personalizzate per adattarsi alle tue esigenze. Verrai seguito da un gruppo di professionisti del settore che ti insegneranno le basi della programmazione di siti internet oltre ai vari trucchi del mestiere che ti aiuterannoa realizzare i tuoi progetti.
               <br />
@@ -21,7 +21,7 @@ export default function Home() {
             </label>
           </div>
 
-          <div className="hover:z-10 drop-shadow-md rounded-md second w-4/6 h-[40vh] border-2 border-white bg-black text-white absolute bottom-0 right-0 flex justify-center items-center overflow-y-auto py-3 px-3 max-sm:items-start">
+          <div className="transition-all hover:z-10 hover:scale-105 drop-shadow-md rounded-md second w-4/6 h-[40vh] border-2 border-white bg-black text-white absolute bottom-0 right-0 flex justify-center items-center overflow-y-auto py-3 px-3 max-sm:items-start">
             <label>
               Oltre alle lezioni, ti verranno assegnati progetti inerenti alle sezioni apprese durante il corso la cui realizzazione ti aiuterà a sviluppare ulteriormente le tue competenze da sviluppatore web.
             </label>
@@ -34,18 +34,18 @@ export default function Home() {
         <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-3 gap-5 z-10">
           <div className="tit col-span-3 text-lg text-center">Cosa ti fornirà OJXacademy:</div>
           <hr className="col-span-3 border-0 outline-none bg-gradient-to-l from-transparent via-white to-transparent" style={{ height: "1px" }} />
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Fondamenta di Html, Css, Js e molto altri</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Design di interfacce web responsive</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Terminologia tecnica</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Sviluppo basato su componenti</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Utilizzo di tools per la progettazione</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di versioning systems</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di Frameworks e librerie</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Messa in produzione dei progetti</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Progettazione di Database</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Coding lato server</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Possibilità di entrare nel team OJX</div>
-          <div className="circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">E molto altro...</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Fondamenta di Html, Css, Js e molto altri</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Design di interfacce web responsive</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Terminologia tecnica</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Sviluppo basato su componenti</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Utilizzo di tools per la progettazione</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di versioning systems</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Uso di Frameworks e librerie</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Messa in produzione dei progetti</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Progettazione di Database</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Coding lato server</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Possibilità di entrare nel team OJX</div>
+          <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">E molto altro...</div>
         </div>
 
         <div id='cyancircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-sky-400 aspect-square rounded-full bottom-[-25vh] left-[-25vh] z-0 blur-3xl opacity-80"></div>

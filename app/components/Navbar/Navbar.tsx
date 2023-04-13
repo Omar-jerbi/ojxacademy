@@ -1,12 +1,15 @@
+"use client"
+
 import Link from 'next/link'
-import React from 'react'
+import './Navbar.scss'
+import { UseUserContext } from '@/app/contexts/userContext'
 
 export default function Navbar() {
-    // const logged = false
+    const { user, setUser } = UseUserContext()
 
     return (
         <nav className='grid grid-flow-row grid-cols-12 flex items-center h-24 fixed top-0 w-full px-2 z-50'>
-            <Link className={"menu col-span-5 max-sm:col-span-7"} href={"/"}>
+            <Link className={"menu col-span-5"} href={"/"}>
                 <svg className='max-h-20' id="academy" viewBox="0 0 210 124" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -16,19 +19,43 @@ export default function Navbar() {
                 </svg>
             </Link>
 
+            {user.id == -1 ?
+                <>
+                    <Link className='menu col-span-2 font-bold text-center' href={"/"}>
+                        Home<br className='sm:hidden' /> page
+                        <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+                    </Link>
 
-            <Link className='menu col-span-2 font-bold text-center' href={"/"}>
-                Home<br className='sm:hidden' /> page
-                <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
-            </Link>
+                    <div className="col-span-1"></div>
 
-            <div className="col-span-1"></div>
+                    <Link className='menu col-span-2 font-bold text-center' href={"/Studente/Login"}>
+                        Area<br className='sm:hidden' /> studenti
+                        <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+                    </Link>
+                </>
+                :
+                <>
+                    <div id='menustit' className='menu col-span-2 col-start-6 font-bold text-center relative'>
+                        Menus
+                        <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
 
+                        <div id='menus' className="hidden absolute flex-col text-center w-full gap-5">
+                            <Link className='border-b border-transparent hover:border-white' href={"/"}>I miei orari</Link>
+                            <Link className='border-b border-transparent hover:border-white' href={"/"}>Lezioni</Link>
+                            <Link className='border-b border-transparent hover:border-white' href={"/"}>Uploads</Link>
+                            <Link className='border-b border-transparent hover:border-white' href={"/"}>I miei dati</Link>
+                            <Link className='border-b border-transparent hover:border-white' href={"/"} onClick={() => setUser(-1)}>Logout</Link>
+                        </div>
+                    </div>
 
-            <Link className='menu col-span-2 font-bold text-center' href={"/Studente/Login"}>
-                Area<br className='sm:hidden' /> studenti
-                <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
-            </Link>
-        </nav>
+                    <div className="col-span-1"></div>
+
+                    <Link className='menu col-span-3 font-bold text-center' href={"/Studente/123/Pagamenti"}>
+                        Pagamenti
+                        <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+                    </Link>
+                </>
+            }
+        </nav >
     )
 }
