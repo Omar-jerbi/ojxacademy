@@ -1,4 +1,5 @@
 import './Home.scss';
+import FormMail from './components/FormMail/FormMail';
 
 export default function Home() {
   return (
@@ -113,9 +114,25 @@ export default function Home() {
 
 
 
-      <div className="home bg-black flex justify-center items-center" style={{ minHeight: "100vh" }}>
-        <div className="tit">
-          <h1 className="font-semibold">Impara l'arte dello sviluppo web!</h1>
+      <div className="home contacts bg-zinc-950 flex justify-center items-center max-sm:pt-10" style={{ minHeight: "100vh" }}>
+        <div className="wrapper w-10/12 mx-auto h-[80vh] relative rounded-lg drop-shadow-md">
+          <div className="flex flex-col justify-around items-center w-full mx-auto h-full">
+            
+            <div className='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2'>
+              Per informazioni: <a className='text-red-400 font-semibold underline underline-offset-2' href="mailto:info@ojxacademy.com">info@ojxacademy.com</a>
+            </div>
+
+            <div className='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2'>
+              Chat <a className='text-red-400 font-semibold underline underline-offset-2' target='_blank' href="https://discordapp.com/users/6823">Discord</a>
+            </div>
+
+            <div className='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2'>
+              Chat <a className='text-red-400 font-semibold underline underline-offset-2' target='_blank' href="https://t.me/OJXwebdev">Telegram</a>
+            </div>
+
+            <FormMail classes='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2' />
+          </div>
+
         </div>
       </div>
 
