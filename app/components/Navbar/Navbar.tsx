@@ -40,7 +40,7 @@ export default function Navbar() {
                         <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
 
                         <div id='menus' className="hidden absolute flex-col text-center w-full gap-5">
-                            <Link className='border-b border-transparent hover:border-white' href={"/"}>I miei orari</Link>
+                            <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}`}>I miei orari</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"}>Lezioni</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"}>Uploads</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"}>I miei dati</Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
 
                     <div className="col-span-1"></div>
 
-                    <Link className='menu col-span-3 font-bold text-center' href={"/Studente/123/Pagamenti"}>
+                    <Link className='menu col-span-3 font-bold text-center' href={`/Studente/${user.id}/Pagamenti`}>
                         Pagamenti
                         <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
                     </Link>

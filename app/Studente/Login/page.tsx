@@ -1,55 +1,74 @@
 "use client"
 
-import Link from "next/link";
-import './Login.scss'
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import { UseUserContext } from "@/app/contexts/userContext";
+import { useRouter } from "next/navigation";
+
 
 
 
 export default function () {
     const { user, setUser } = UseUserContext()
 
+    const router = useRouter()
+
     const [i, si] = useState({
         mail: '',
         pw: ''
     })
 
-    const getId = () => {
-        return 9999
-    }
+    const [l, sl] = useState(false)
 
-
-    const handleClick = (e: MouseEvent) => {
-        if (i.mail == '' || i.pw == '')
-            e.preventDefault()
+    const handleClick = async (e: MouseEvent) => {
+        sl(true)
+        if (i.mail == '' || i.pw == '') {
+            sl(false)
+            alert("manca")
+        }
         else {
-            setUser(9999)
+            const founduser = await fetch("/api/Student/Login", {
+                method: "POST",
+                body: JSON.stringify({ email: i.mail, pw: i.pw })
+            })
+
+            const res = await founduser.json()
+            sl(false)
+
+            if (!res)
+                alert("no acc")
+            else {
+                setUser(res.id)
+                router.push("/Studente/" + res.id)
+            }
+
         }
     }
 
+
+
+
     return (
-        <div className="login bg-gray-950 flex justify-center items-center relative overflow-hidden" style={{ minHeight: "100vh" }}>
-            <div className="container mx-auto rounded-md border-2 border-white bg-gray-950 z-10">
-                <div className="form flex flex-col w-11/12 mx-auto py-10 gap-10">
-                    <input className="outline-none h-8 py-1 px-1 rounded-md text-black " type="email" placeholder="Email..." onChange={(e) => si({ ...i, mail: e.target.value })} />
-                    <input className="outline-none h-8 py-1 px-1 rounded-md text-black " type="password" placeholder="Password" onChange={(e) => si({ ...i, pw: e.target.value })} />
+        <div className="login rounded-md border-2 border-white bg-gray-950">
+            <div className="form flex flex-col w-11/12 mx-auto py-10 gap-10">
+                <input className="outline-none h-8 py-1 px-1 rounded-md text-black " type="email" placeholder="Email..." onChange={(e) => si({ ...i, mail: e.target.value })} />
+                <input className="outline-none h-8 py-1 px-1 rounded-md text-black " type="password" placeholder="Password" onChange={(e) => si({ ...i, pw: e.target.value })} />
 
-                    <Link
-                        className="text-center py-2 w-3/6 mx-auto rounded-md border-2 border-transparent transition-all hover:border-white"
-                        href={"/Studente/" + getId()}
-                        onClick={(e) => handleClick(e)}>
-                        Login
-                    </Link>
+                <button
+                    className="text-center py-2 w-3/6 mx-auto rounded-md border-2 border-transparent transition-all hover:border-white"
+                    onClick={(e) => handleClick(e)}>
+                    Login
+                </button>
 
-                    <div className="call">
-                        Non sei ancora studente OJX? <a className="underline underline-offset-4" href="mailto:info@ojxwebdev.com">Contattaci per maggiori informazioni!</a>
+                {l &&
+                    <div className="">
+                        ...
                     </div>
+                }
+
+                <div className="call">
+                    Non sei ancora studente OJX? <a className="underline underline-offset-4" href="mailto:info@ojxwebdev.com">Contattaci per maggiori informazioni!</a>
                 </div>
             </div>
-
-            <div id="circlec" className=" absolute h-[100vh] w-[100vh] rounded-full bg-cyan-400 blur-3xl opacity-50 bottom-[-25vh] left-[-25vh] z-0"></div>
-            <div id="circlep" className=" absolute h-[100vh] w-[100vh] rounded-full bg-purple-500 blur-3xl opacity-50 top-[-25vh] right-[-25vh] z-0"></div>
         </div>
     );
 }

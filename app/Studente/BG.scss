@@ -1,0 +1,26 @@
+.wrapperbg {
+    #circlec {
+        animation: mvc 8s ease-in-out 0s infinite alternate;
+    }
+
+    #circlep {
+        animation: mvp 8s ease-in-out 0s infinite alternate;
+    }
+
+    @keyframes mvc {
+        to {
+            bottom: 50vh;
+            left: 90vh;
+            scale: 2;
+        }
+    }
+
+    @keyframes mvp {
+        to {
+            top: 50vh;
+            right: 90vh;
+            scale: 2;
+        }
+    }
+
+}

@@ -4,7 +4,7 @@ interface props {
 
 export default function ({ params }: props) {
     return (
-        <div className="bg-black min-h-[100vh]">
+        <div>
             sezione pagamenti
             {params.id}
         </div>

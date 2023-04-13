@@ -1,0 +1,9 @@
+de/crypt pw
+
+Quando ok con context => session storage user!
+
+animation in pagina prezzi home
+
+email js (home contacts)
+
+loading animation
