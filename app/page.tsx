@@ -5,14 +5,24 @@ export default function Home() {
   return (
     <div className="homecontainer">
 
-      <div className="home bg-black flex justify-center items-center" style={{ minHeight: "100vh" }}>
+      <div className="home bg-black flex justify-center items-center relative" style={{ minHeight: "100vh" }}>
         <div className="tit">
           <h1 className="font-semibold">Impara l'arte dello sviluppo web!</h1>
         </div>
+
+        <span className='text-red-300/10 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
+          <div className='font-semibold text-lg max-sm:text-sm'>
+            Scopri di più
+          </div>
+
+          <div>
+            <svg className='h-5 fill-red-300/10 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+          </div>
+        </span>
       </div>
 
 
-      <div className="home pres flex justify-center items-center" style={{ minHeight: "100vh" }}>
+      <div className="home pres flex justify-center items-center relative" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto  h-[70vh] relative">
           <div className="transition-all hover:z-10 hover:scale-105 drop-shadow-md rounded-md first w-4/6 h-[40vh] border-2 border-black bg-white text-black absolute top-0 left-0 flex justify-center items-center overflow-y-auto py-3 px-3 : max-sm:items-start">
             <label>
@@ -28,6 +38,17 @@ export default function Home() {
             </label>
           </div>
         </div>
+
+        <span className='text-yellow-300/80 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
+          <div className='font-semibold text-lg max-sm:text-sm'>
+            Cosa apprenderai in OJXacademy
+          </div>
+
+          <div>
+            <svg className='h-5 fill-yellow-300/80 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+          </div>
+        </span>
+
       </div>
 
 
@@ -51,6 +72,17 @@ export default function Home() {
 
         <div id='cyancircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-sky-400 aspect-square rounded-full bottom-[-25vh] left-[-25vh] z-0 blur-3xl opacity-80"></div>
         <div id='purplecircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-purple-400 aspect-square rounded-full top-[-25vh] right-[-25vh] z-0 blur-3xl opacity-60"></div>
+      
+        <span className='text-lime-300/60 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
+          <div className='font-semibold text-lg max-sm:text-sm'>
+            Piani e costi mensili
+          </div>
+
+          <div>
+            <svg className='h-5 fill-lime-300/60 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+          </div>
+        </span>
+      
       </div>
 
 
@@ -101,33 +133,30 @@ export default function Home() {
           </div>
         </div>
 
-        <span className='text-red-900 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
+        <span className='text-red-900/50 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
           <div className='font-semibold text-lg max-sm:text-sm'>
             Scrivici per maggiori informazioni e per prenotare la tua chiamata!
           </div>
 
           <div>
-            <svg className='h-6 fill-red-900' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+            <svg className='h-5 fill-red-900/50 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
           </div>
         </span>
       </div>
 
 
 
-      <div className="home contacts bg-zinc-950 flex justify-center items-center max-sm:pt-10" style={{ minHeight: "100vh" }}>
+      <div className="home contacts bg-zinc-950 flex justify-center items-center max-sm:pt-20" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto h-[80vh] relative rounded-lg drop-shadow-md">
           <div className="flex flex-col justify-around items-center w-full mx-auto h-full">
-            
+
             <div className='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2'>
               Per informazioni: <a className='text-red-400 font-semibold underline underline-offset-2' href="mailto:info@ojxacademy.com">info@ojxacademy.com</a>
             </div>
 
-            <div className='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2'>
-              Chat <a className='text-red-400 font-semibold underline underline-offset-2' target='_blank' href="https://discordapp.com/users/6823">Discord</a>
-            </div>
-
-            <div className='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2'>
-              Chat <a className='text-red-400 font-semibold underline underline-offset-2' target='_blank' href="https://t.me/OJXwebdev">Telegram</a>
+            <div className='bg-zinc-950 w-full py-5 text-sm max-sm:py-2 flex justify-evenly'>
+              <span>Chat <a className='text-red-400 font-semibold underline underline-offset-2' target='_blank' href="https://t.me/OJXwebdev">Telegram</a></span>
+              <span>Chat <a className='text-red-400 font-semibold underline underline-offset-2' target='_blank' href="https://discordapp.com/users/6823">Discord</a></span>
             </div>
 
             <FormMail classes='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2' />

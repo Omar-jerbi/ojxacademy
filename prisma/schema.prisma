@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model groups {
+  id       Int  @id @default(autoincrement())
+  schedule Json //[{"d":"lun", "f":"13", "t":"15"}, {"d":"mer", "f":"13", "t":"15"}]   <- ES
+
+  students students[]
+  lessons  lessons[]
+}
+
+model students {
+  id         Int     @id @default(autoincrement())
+  name       String?
+  familyname String?
+  schedule   Json?
+  email      String
+  pw         String
+
+  groupId Int?
+  group   groups? @relation(fields: [groupId], references: [id])
+
+  payments payments[]
+  lessons  lessons[]
+}
+
+model payments {
+  id    Int      @id @default(autoincrement())
+  value Decimal
+  date  DateTime @default(now())
+
+  studentId Int
+  student   students @relation(fields: [studentId], references: [id])
+}
+
+model lessons {
+  id   Int      @id @default(autoincrement())
+  desc String?
+  date DateTime @default(now())
+
+  single_studentId Int?
+  single_student   students? @relation(fields: [single_studentId], references: [id])
+
+  
+  groupsId Int?
+  group    groups? @relation(fields: [groupsId], references: [id])
+}
