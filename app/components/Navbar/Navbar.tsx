@@ -41,7 +41,7 @@ export default function Navbar() {
 
                         <div id='menus' className="hidden absolute flex-col text-center w-full gap-5">
                             <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}`}>I miei orari</Link>
-                            <Link className='border-b border-transparent hover:border-white' href={"/"}>Lezioni</Link>
+                            <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}/Lezioni`}>Lezioni</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"}>Uploads</Link>
                             <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}/Dati`}>I miei dati</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"} onClick={() => setUser("")}>Logout</Link>

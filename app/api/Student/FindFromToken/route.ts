@@ -31,7 +31,7 @@ export async function POST(req: Request) {
 
 
     if (!stud?.student.groupId) {
-        return NextResponse.json(stud)
+        return NextResponse.json(stud?.student)
     } else {
         const studgrp = await prisma.students.findFirst({
             where: {

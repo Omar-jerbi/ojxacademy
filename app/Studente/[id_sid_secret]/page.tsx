@@ -27,6 +27,7 @@ export default async function ({ params }: props) {
                         <Sch key={k} day={d} />
                     )
             }
+
         </div>
     );
 }
