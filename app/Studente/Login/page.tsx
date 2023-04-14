@@ -38,7 +38,7 @@ export default function () {
             if (!res)
                 alert("Nessun account trovato. Controlla i dati inseriti")
             else {
-                setUser(res.studentsId)
+                setUser(res.id + "_" + res.studentsId + "_" + res.secret)
                 router.push("/Studente/" + res.id + "_" + res.studentsId + "_" + res.secret)
             }
 

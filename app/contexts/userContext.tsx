@@ -4,14 +4,14 @@ import { createContext, useContext, useState } from "react";
 
 
 interface user {
-    id: number
+    id: string
 }
 
-export const defUser: user = { id: -1 }
+export const defUser: user = { id: "" }
 
 interface userType {
     user: user,
-    setUser: (x: number) => void
+    setUser: (x: string) => void
 }
 
 
@@ -20,7 +20,7 @@ const UserContext = createContext<userType>({ user: defUser, setUser: () => { } 
 export const UserContextProvider = ({ children }: { children: React.ReactNode }) => {
     const [user, setU] = useState<user>(defUser)
 
-    const setUser = (x: number) => {
+    const setUser = (x: string) => {
         setU({ ...user, id: x })
     }
 

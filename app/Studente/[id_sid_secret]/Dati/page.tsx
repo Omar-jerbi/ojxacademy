@@ -1,3 +1,4 @@
+import { getUser } from "../../GetUser";
 import PWin from "./comps/PWin";
 
 
@@ -6,14 +7,7 @@ interface props {
 }
 
 export default async function ({ params }: props) {
-
-    const stud = await fetch(process.env.API_URL + "api/Student/FindFromID", {
-        method: "POST",
-        body: JSON.stringify({ id: params.id }),
-    })
-    const x = await stud.json()
-
-
+    const x = await getUser(params)
 
     return (
         <div className="bg-gray-950 text-center py-6 flex flex-col justify-center items-center gap-5 border-2 border-white rounded-md">
@@ -36,7 +30,7 @@ export default async function ({ params }: props) {
 
             <div className="grid grid-cols-12 gap-5 w-3/6">
                 <h1 className="col-span-12">Modifica Password:</h1>
-                <PWin id={params.id} />
+                <PWin id={Number(params.id_sid_secret.split('_')[1])} />
             </div>
 
         </div>
