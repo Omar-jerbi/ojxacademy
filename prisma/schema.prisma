@@ -28,6 +28,7 @@ model students {
 
   payments payments[]
   lessons  lessons[]
+  token    tokens[]
 }
 
 model payments {
@@ -47,7 +48,14 @@ model lessons {
   single_studentId Int?
   single_student   students? @relation(fields: [single_studentId], references: [id])
 
-  
   groupsId Int?
   group    groups? @relation(fields: [groupsId], references: [id])
+}
+
+model tokens {
+  id     Int    @id @default(autoincrement())
+  secret Int
+
+  studentsId Int @unique
+  student    students @relation(fields: [studentsId], references: [id])
 }

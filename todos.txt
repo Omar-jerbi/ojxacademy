@@ -1,4 +1,3 @@
-OK de/crypt pw
 
 checks in new pw
 

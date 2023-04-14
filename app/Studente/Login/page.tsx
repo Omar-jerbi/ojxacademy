@@ -1,16 +1,15 @@
 "use client"
 
-import { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { UseUserContext } from "@/app/contexts/userContext";
 import { useRouter } from "next/navigation";
-
-
 
 
 export default function () {
     const { user, setUser } = UseUserContext()
 
     const router = useRouter()
+
 
     const [i, si] = useState({
         mail: '',
@@ -26,7 +25,6 @@ export default function () {
         sl(true)
         if (i.mail == '' || i.pw == '') {
             sl(false)
-            // alert("manca")
         }
         else {
             const founduser = await fetch("/api/Student/Login", {
@@ -40,8 +38,8 @@ export default function () {
             if (!res)
                 alert("Nessun account trovato. Controlla i dati inseriti")
             else {
-                setUser(res.id)
-                router.push("/Studente/" + res.id)
+                setUser(res.studentsId)
+                router.push("/Studente/" + res.id + "_" + res.studentsId + "_" + res.secret)
             }
 
         }

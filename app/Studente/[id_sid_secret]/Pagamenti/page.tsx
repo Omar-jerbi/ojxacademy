@@ -1,12 +1,11 @@
 interface props {
-    params: any//.id
+    params: any
 }
 
 export default function ({ params }: props) {
     return (
         <div>
             sezione pagamenti
-            {params.id}
         </div>
     );
 }
