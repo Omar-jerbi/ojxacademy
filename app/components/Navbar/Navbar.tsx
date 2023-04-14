@@ -43,7 +43,7 @@ export default function Navbar() {
                             <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}`}>I miei orari</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"}>Lezioni</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"}>Uploads</Link>
-                            <Link className='border-b border-transparent hover:border-white' href={"/"}>I miei dati</Link>
+                            <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}/Dati`}>I miei dati</Link>
                             <Link className='border-b border-transparent hover:border-white' href={"/"} onClick={() => setUser(-1)}>Logout</Link>
                         </div>
                     </div>
