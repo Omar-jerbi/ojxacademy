@@ -4,7 +4,7 @@ interface props {
 
 
 const fn = async (id: number) => {
-    const stud = await fetch("https://ojxacademy.vercel.app/api/Student/FindFromID", {
+    const stud = await fetch(process.env.API_URL + "api/Student/FindFromID", {
         method: "POST",
         body: JSON.stringify({ id: id }),
     })
@@ -15,12 +15,14 @@ const fn = async (id: number) => {
 
 export default async function ({ params }: props) {
 
-    // const xx = await fn(params.id)
+    const xx = await fn(params.id)
 
 
     return (
         <>
-            stud id : {params.id}
+            {xx.name}
+            {xx.familyname}
+
         </>
     );
 }

@@ -1,5 +1,3 @@
-"use client"
-
 import PWin from "./comps/PWin";
 
 
@@ -8,7 +6,8 @@ interface props {
 }
 
 export default async function ({ params }: props) {
-    const stud = await fetch("/api/Student/FindFromID", {
+
+    const stud = await fetch(process.env.API_URL + "api/Student/FindFromID", {
         method: "POST",
         body: JSON.stringify({ id: params.id }),
     })
