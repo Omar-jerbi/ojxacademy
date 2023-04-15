@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 
 interface user {
@@ -17,12 +17,24 @@ interface userType {
 
 const UserContext = createContext<userType>({ user: defUser, setUser: () => { } })
 
-export const UserContextProvider = ({ children }: { children: React.ReactNode }) => {
-    const [user, setU] = useState<user>(defUser)
+export const UserContextProvider = ({ children }: { children: React.ReactNode }) => {    
+    useEffect(() => {        
+        if (sessionStorage.getItem("user")) {
+            setU({ ...user, id: sessionStorage.getItem("user")! })
+        }
+    }, [])
 
+    
+    const [user, setU] = useState<user>({ id: "" })
     const setUser = (x: string) => {
         setU({ ...user, id: x })
     }
+
+    useEffect(() => {
+        if (user.id != '') {
+            sessionStorage.setItem("user", user.id)
+        }
+    }, [user])
 
     return (
         <UserContext.Provider value={{ user, setUser }} >

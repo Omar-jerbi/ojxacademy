@@ -9,7 +9,7 @@ export default function Navbar() {
     const { user, setUser } = UseUserContext()
 
     return (
-        <nav className='grid grid-flow-row grid-cols-12 flex items-center h-24 fixed top-0 w-full px-2 z-50'>
+        <nav className='grid grid-flow-row grid-cols-12 items-center h-24 fixed top-0 w-full px-2 z-50'>
             <Link className={"menu col-span-5"} href={"/"}>
                 <svg className='max-h-20' id="academy" viewBox="0 0 210 124" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
