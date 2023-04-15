@@ -3,6 +3,7 @@
 import { MouseEvent, useState } from "react";
 import { UseUserContext } from "@/app/contexts/userContext";
 import { useRouter } from "next/navigation";
+import Loader from "@/app/components/Loader/Loader";
 
 
 export default function () {
@@ -68,7 +69,7 @@ export default function () {
                     <button
                         className="text-center py-2 w-3/6 mx-auto rounded-md border-2 border-transparent transition-all hover:border-white"
                     >
-                        ...
+                        <Loader height="h-6"/>
                     </button>
                     :
                     <button

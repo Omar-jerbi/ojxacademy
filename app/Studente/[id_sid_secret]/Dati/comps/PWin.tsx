@@ -1,5 +1,6 @@
 "use client"
 
+import Loader from "@/app/components/Loader/Loader"
 import { useState } from "react"
 
 interface props {
@@ -47,7 +48,7 @@ export default function PWin({ id }: props) {
                     <button className="col-span-3" onClick={() => { insertPW() }}>Salva password</button>
                     :
                     <span className="col-span-3">
-                        ...
+                        <Loader height="h-6"/>
                     </span>
                 }
             </div>

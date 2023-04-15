@@ -1,5 +1,6 @@
 "use client"
 
+import { L } from './L';
 import Link from 'next/link'
 import './Navbar.scss'
 import { UseUserContext } from '@/app/contexts/userContext'
@@ -39,12 +40,11 @@ export default function Navbar() {
                         Menus
                         <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
 
-                        <div id='menus' className="hidden absolute flex-col text-center w-full gap-5">
-                            <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}`}>I miei orari</Link>
-                            <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}/Lezioni`}>Lezioni</Link>
-                            <Link className='border-b border-transparent hover:border-white' href={"/"}>Uploads</Link>
-                            <Link className='border-b border-transparent hover:border-white' href={`/Studente/${user.id}/Dati`}>I miei dati</Link>
-                            <Link className='border-b border-transparent hover:border-white' href={"/"} onClick={() => setUser("")}>Logout</Link>
+                        <div id='menus' className="hidden absolute flex-col text-center w-full gap-5 max-sm:flex-row max-sm:items-center max-sm:justify-center max-sm:w-[100vw] max-sm:fixed max-sm:top-28 max-sm:left-0">
+                            <L route='' userid={user.id} tit='I miei orari' />
+                            <L route='/Lezioni' userid={user.id} tit='Lezioni seguite' />
+                            <L route='/Dati' userid={user.id} tit='I miei dati' />
+                            <Link className='max-sm:text-sm border-b border-transparent hover:border-white' href={"/"} onClick={() => setUser("")}>Logout</Link>
                         </div>
                     </div>
 
