@@ -99,8 +99,19 @@
 
 
   .infos {
+    background-color: rgb(0, 42, 82);
+    animation: rova 3s ease-in-out 0s infinite alternate;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+
     #price {
       filter: drop-shadow(0 0 2px #22c55ee8);
+    }
+  }
+
+  @keyframes rova {
+    to {
+      background-size: 100% 100%;
     }
   }
 

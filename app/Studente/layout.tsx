@@ -19,7 +19,7 @@ export default function Layout({
                 </div>
             </div>
 
-            <div id="circlec" className=" absolute h-[100vh] w-[100vh] rounded-full bg-cyan-400 blur-3xl opacity-50 bottom-[-25vh] left-[-25vh] z-0"></div>
+            <div id="circlec" className=" absolute h-[100vh] w-[100vh] rounded-full bg-cyan-500 blur-3xl opacity-50 bottom-[-25vh] left-[-25vh] z-0"></div>
             <div id="circlep" className=" absolute h-[100vh] w-[100vh] rounded-full bg-purple-500 blur-3xl opacity-50 top-[-25vh] right-[-25vh] z-0"></div>
         </div>
 

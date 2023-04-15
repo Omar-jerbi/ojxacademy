@@ -72,7 +72,7 @@ export default function Home() {
 
         <div id='cyancircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-sky-400 aspect-square rounded-full bottom-[-25vh] left-[-25vh] z-0 blur-3xl opacity-80"></div>
         <div id='purplecircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-purple-400 aspect-square rounded-full top-[-25vh] right-[-25vh] z-0 blur-3xl opacity-60"></div>
-      
+
         <span className='text-lime-300/60 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
           <div className='font-semibold text-lg max-sm:text-sm'>
             Piani e costi mensili
@@ -82,12 +82,12 @@ export default function Home() {
             <svg className='h-5 fill-lime-300/60 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
           </div>
         </span>
-      
+
       </div>
 
 
 
-      <div className="home infos relative flex justify-center items-center bg-gradient-to-t from-slate-50 from-0% to-gray-900 to-65%" style={{ minHeight: "100vh" }}>
+      <div className="home infos relative flex justify-center items-center bg-gradient-to-t from-transparent from-0% to-gray-900 to-55%" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2 gap-7 max-sm:gap-5">
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-center">
@@ -119,27 +119,31 @@ export default function Home() {
             </div>
           </div>
 
-          <hr className='col-span-2 border-0 outline-none bg-gradient-to-r from-transparent via-green-500 to-transparent' style={{ height: "1px" }} />
+          <hr className='col-span-2 border-0 outline-none bg-gradient-to-r from-transparent via-green-900 to-transparent' style={{ height: "1px" }} />
 
           <div className="col-span-2 text-center font-semibold text-lg max-sm:text-sm">
             2 lezioni settimanali della durata di 180minuti
             <div className="my-4 max-sm:my-0"></div>
-            Micro-progetti settimanali mirati
+            Lezioni smart sul canale Discord del corso
             <div className="my-4 max-sm:my-0"></div>
-            24 ore di lezioni + 4 micro-progetti ogni mese
+            24 ore di lezione + 4 micro-progetti ogni mese
             <div className="my-4 max-sm:my-0"></div>
-            Colloquio introduttivo di 30minuti gratuito
+
+            <span>Enfasi sull'aspetto pratico dello sviluppo web</span>
+            <div className="my-4 max-sm:my-0"></div>
+
+            <span className='underline underline-offset-2 decoration-green-800'>Colloquio introduttivo di 30minuti gratuito</span>
             <div className="my-4 max-sm:my-0 "></div>
           </div>
         </div>
 
-        <span className='text-red-900/50 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
+        <span className='text-center text-red-100 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
           <div className='font-semibold text-lg max-sm:text-sm'>
-            Scrivici per maggiori informazioni e per prenotare la tua chiamata!
+            Scrivici prenotare la tua chiamata introduttiva e ottenere il programma completo delle lezioni!
           </div>
 
           <div>
-            <svg className='h-5 fill-red-900/50 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+            <svg className='h-5 fill-red-100 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
           </div>
         </span>
       </div>
@@ -151,7 +155,7 @@ export default function Home() {
           <div className="flex flex-col justify-around items-center w-full mx-auto h-full">
 
             <div className='bg-zinc-950 w-full text-center py-5 text-sm max-sm:py-2'>
-              Per informazioni: <a className='text-red-400 font-semibold underline underline-offset-2' href="mailto:info@ojxacademy.com">info@ojxacademy.com</a>
+              Per informazioni: <a className='text-red-400 font-semibold underline underline-offset-2' href="mailto:info@ojxwebdev.com">info@ojxwebdev.com</a>
             </div>
 
             <div className='bg-zinc-950 w-full py-5 text-sm max-sm:py-2 flex justify-evenly'>
