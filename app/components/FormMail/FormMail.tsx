@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Loader from "../Loader/Loader"
 
-
 interface props {
     classes?: string
 }
@@ -24,9 +23,9 @@ export default function FormMail({ classes }: props) {
                     "Content-Type": 'application/json'
                 },
                 body: JSON.stringify({
-                    user_id: 'uwCGgOFp3VSHCQIwE',                    
-                    service_id: 'service_lxzcd9l',
-                    template_id: 'template_piam30a',
+                    user_id: process.env.NEXT_PUBLIC_EMAILJS_USER,
+                    service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
+                    template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE,
                     template_params: {
                         'site': 'OJXACADEMY',
                         'subj': 'msg da home page',
