@@ -51,7 +51,7 @@ export default function Navbar() {
                                 <L route='' userid={user.id} tit='I miei orari' />
                                 <L route='/Lezioni' userid={user.id} tit='Lezioni seguite' />
                                 <L route='/Dati' userid={user.id} tit='I miei dati' />
-                                <Link className='max-sm:text-sm border-b border-transparent hover:border-white' href={"/"} onClick={() => setUser("")}>Logout</Link>
+                                <Link className='max-sm:text-sm border-b border-transparent hover:border-white' href={"/"} onClick={() => {setUser(""); sessionStorage.removeItem("user")}}>Logout</Link>
                             </div>
                         </div>
 

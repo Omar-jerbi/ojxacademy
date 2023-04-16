@@ -139,7 +139,7 @@ export default function Home() {
 
         <span className='text-center text-red-100 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
           <div className='font-semibold text-lg max-sm:text-sm'>
-            Scrivici prenotare la tua chiamata introduttiva e ottenere il programma completo delle lezioni!
+            Scrivici per prenotare la tua chiamata introduttiva e ottenere il programma completo delle lezioni!
           </div>
 
           <div>
@@ -150,7 +150,7 @@ export default function Home() {
 
 
 
-      <div className="home contacts bg-zinc-950 flex justify-center items-center max-sm:pt-20" style={{ minHeight: "100vh" }}>
+      <div id='cont' className="home contacts bg-zinc-950 flex justify-center items-center max-sm:pt-20" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto h-[80vh] relative rounded-lg drop-shadow-md">
           <div className="flex flex-col justify-around items-center w-full mx-auto h-full">
 

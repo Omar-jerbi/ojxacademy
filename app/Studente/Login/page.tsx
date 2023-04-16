@@ -4,6 +4,8 @@ import { MouseEvent, useState } from "react";
 import { UseUserContext } from "@/app/contexts/userContext";
 import { useRouter } from "next/navigation";
 import Loader from "@/app/components/Loader/Loader";
+import swal from "sweetalert";
+import Link from "next/link";
 
 
 export default function () {
@@ -36,8 +38,8 @@ export default function () {
             const res = await founduser.json()
             sl(false)
 
-            if (!res)
-                alert("Nessun account trovato. Controlla i dati inseriti")
+            if (!res)                
+                swal("","Nessun account trovato. Controlla i dati inseriti","error")
             else {
                 setUser(res.id + "_" + res.studentsId + "_" + res.secret)
                 router.push("/Studente/" + res.id + "_" + res.studentsId + "_" + res.secret)
@@ -81,7 +83,8 @@ export default function () {
 
 
                 <div className="call">
-                    Non sei ancora studente OJX? <a className="underline underline-offset-4" href="mailto:info@ojxwebdev.com">Contattaci per maggiori informazioni!</a>
+                    Non sei ancora studente OJX? 
+                    <a className="underline underline-offset-4" href="mailto:info@ojxwebdev.com">Contattaci per maggiori informazioni!</a>
                 </div>
             </div>
         </div>
