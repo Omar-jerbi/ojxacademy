@@ -8,3 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+#sizereact {
+    font-size: max(1.7cqmin, 1rem);
+}

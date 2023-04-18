@@ -8,36 +8,56 @@ datasource db {
 }
 
 model groups {
-  id       Int  @id @default(autoincrement())
-  schedule Json //[{"d":"lun", "f":"13", "t":"15"}, {"d":"mer", "f":"13", "t":"15"}]   <- ES
-
-  students students[]
-  lessons  lessons[]
+  id        Int         @id @default(autoincrement())
+  schedule  Json
+  lessons   lessons[]
+  students  students[]
+  nextmonth nextmonth[]
 }
 
 model students {
-  id         Int     @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   name       String?
   familyname String?
   schedule   Json?
   email      String
   pw         String
+  groupId    Int?
+  oktochange Boolean? @default(false)////////////
 
-  groupId Int?
-  group   groups? @relation(fields: [groupId], references: [id])
-
-  payments payments[]
-  lessons  lessons[]
-  token    tokens[]
+  lessons   lessons[]
+  payments  payments[]
+  group     groups?     @relation(fields: [groupId], references: [id])
+  token     tokens?
+  nextmonth nextmonth[]
 }
 
 model payments {
-  id    Int      @id @default(autoincrement())
-  value Decimal
-  date  DateTime @default(now())
-
+  id        Int      @id @default(autoincrement())
+  value     Decimal
+  date      DateTime @default(now())
   studentId Int
-  student   students @relation(fields: [studentId], references: [id])
+ 
+
+  student students @relation(fields: [studentId], references: [id])
+
+  monthId Int
+  month nextmonth @relation(fields: [monthId], references: [id])
+}
+
+model nextmonth {
+  id       Int      @id @default(autoincrement())
+  schedule Json?
+  from     DateTime @default(now())
+  to       DateTime @default(now())
+
+  single_studentId Int?
+  single_student   students? @relation(fields: [single_studentId], references: [id])
+
+  groupsId Int?
+  group    groups?    @relation(fields: [groupsId], references: [id])
+
+  payments payments[]
 }
 
 model lessons {
@@ -53,9 +73,8 @@ model lessons {
 }
 
 model tokens {
-  id     Int    @id @default(autoincrement())
-  secret Int
-
-  studentsId Int @unique
+  id         Int      @id @default(autoincrement())
+  studentsId Int      @unique
+  secret     Int
   student    students @relation(fields: [studentsId], references: [id])
 }

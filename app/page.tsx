@@ -1,3 +1,4 @@
+import { DiffSec } from './DiffSec';
 import './Home.scss';
 import FormMail from './components/FormMail/FormMail';
 
@@ -53,7 +54,7 @@ export default function Home() {
 
 
       <div className="home goals flex justify-center items-center relative overflow-hidden" style={{ minHeight: "100vh" }}>
-        <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-3 gap-5 z-10">
+        <article className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-3 gap-5 z-10">
           <div className="tit col-span-3 text-lg text-center">Cosa ti fornirà OJXacademy:</div>
           <hr className="col-span-3 border-0 outline-none bg-gradient-to-l from-transparent via-white to-transparent" style={{ height: "1px" }} />
           <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Fondamenta di Html, Css, Js e molto altri</div>
@@ -68,7 +69,7 @@ export default function Home() {
           <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Coding lato server</div>
           <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Possibilità di entrare nel team OJX</div>
           <div className="transition-all hover:scale-105 circle drop-shadow-lg bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">E molto altro...</div>
-        </div>
+        </article>
 
         <div id='cyancircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-sky-400 aspect-square rounded-full bottom-[-25vh] left-[-25vh] z-0 blur-3xl opacity-80"></div>
         <div id='purplecircle' className="bgcircle absolute h-[125vh] w-[125vh] bg-purple-400 aspect-square rounded-full top-[-25vh] right-[-25vh] z-0 blur-3xl opacity-60"></div>
@@ -87,7 +88,7 @@ export default function Home() {
 
 
 
-      <div className="home infos relative flex justify-center items-center bg-gradient-to-t from-transparent from-0% to-gray-900 to-55%" style={{ minHeight: "100vh" }}>
+      <article className="home infos relative flex justify-center items-center bg-gradient-to-t from-transparent from-0% to-gray-900 to-55%" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2 gap-7 max-sm:gap-5">
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-center">
@@ -139,14 +140,71 @@ export default function Home() {
 
         <span className='text-center text-red-100 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
           <div className='font-semibold text-lg max-sm:text-sm'>
-            Scrivici per prenotare la tua chiamata introduttiva e ottenere il programma completo delle lezioni!
+            Perchè scegliere OJX
           </div>
 
           <div>
             <svg className='h-5 fill-red-100 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
           </div>
         </span>
-      </div>
+      </article>
+
+
+
+
+
+      <article className="home diffs relative flex justify-center items-center bg-gradient-to-t from-zinc-950 from-0% to-[#002a52] to-75%" style={{ minHeight: "100vh" }}>
+        <div className="wrapper w-10/12 mx-auto h-[70vh] relative rounded-lg drop-shadow-md border px-4 py-4 flex flex-col justify-evenly items-center max-sm:gap-y-3">
+          <DiffSec
+            color='text-white'
+            tit='mb-8'
+            texts={[
+              "Gli altri corsi online",
+              "-Unico pagamento di migliaia di euro dopo 1 o 2 anni",
+              "-Classi di decine di partecipanti e meno attenzione all'individuo",
+              "-Pesanti penali se decidi di interrompere le lezioni prima di un certo periodo",
+              "-Diversi tutor per ogni disciplina"
+            ]} />
+
+
+          <DiffSec
+            color='text-green-300'
+            tit='border border-green-200 py-4'
+            texts={[
+              "Con OJXacademy",
+              "-Pagamanti contenuti mensili con la possibilità di interrompere o sospendere momentaneamente il servizio quando vuoi",
+              "-Se dopo il primo mese non sei soddisfatto/a, ti rimborsiamo al 100%",
+              "-Nessuna durata minima richiesta. Quando senti di aver imparato abbastanza sei incoraggiato a lanciarti nel mondo dello sviluppo professionale!",
+              "-Un unico tutor qualificato ti seguirà per tutto il tuo percorso",
+              "-Focus solo sulle tecnologie piu influenti e diffuse sul mercato",
+              "-Non solo codice: imparerai anche tecniche di design digitale, tasks planning e setup di ambienti di lavoro",
+              "-Percorsi in base alle tue skill e ai tuoi obbiettivi finali",
+              "-Facciamo conoscenza prima di iniziare! Prenota il tuo appuntamento virtuale di 30minuti su Google Zoom o Discord per chiederci tutti i dettagli delle lezioni di OJXacademy",
+
+            ]}
+          />
+
+
+        </div>
+
+
+
+
+
+
+
+        <span className='text-center text-red-100 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
+          <div className='font-semibold text-lg max-sm:text-sm'>
+            Prenota la tua chiamata introduttiva e ottieni il programma completo delle lezioni!
+          </div>
+          <div>
+            <svg className='h-5 fill-red-100 max-sm:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" /></svg>
+          </div>
+        </span>
+      </article>
+
+
+
 
 
 

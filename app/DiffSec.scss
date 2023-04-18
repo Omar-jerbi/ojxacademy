@@ -1,0 +1,23 @@
+.diffsec {
+
+    /* ===== Scrollbar CSS ===== */
+    /* Firefox */
+
+    scrollbar-width: auto;
+    scrollbar-color: #ebebeb #00000000;
+
+
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #00000000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #86efac;
+        border-radius: 8px;        
+    }
+}

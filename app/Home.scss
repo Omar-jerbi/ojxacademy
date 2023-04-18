@@ -55,7 +55,7 @@
   }
 
   .pres {
-    background-image: url(../public/bg1.jpg);
+    background-image: url(./bg1.jpg);
     background-size: cover;
   }
 
@@ -70,12 +70,12 @@
 
     #cyancircle {
       scale: 1.5;
-      animation: circlecolor 5s ease-in-out 0s infinite alternate;
+      animation: circlecolor 4s ease-in-out 0s infinite alternate;
     }
 
     #purplecircle {
       scale: 1.5;
-      animation: circlecolor2 5s ease-in-out 500ms infinite alternate;
+      animation: circlecolor2 4s ease-in-out 500ms infinite alternate;
     }
 
     @keyframes circlecolor {

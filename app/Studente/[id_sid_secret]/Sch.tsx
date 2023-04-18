@@ -1,4 +1,4 @@
-interface week {
+export interface week {
     d: string,
     f: string,
     t: string,
