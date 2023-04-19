@@ -161,7 +161,7 @@ export default function Home() {
       <article className="home diffs relative flex justify-center items-center bg-gradient-to-t from-zinc-950 from-0% to-[#002a52] to-75%" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto h-[70vh] relative rounded-lg drop-shadow-md border px-4 py-4 flex flex-col justify-evenly items-center max-sm:gap-y-3">
           <DiffSec
-            color='white'
+            color='w'
             tit='mb-8 border border-white py-4'
             texts={[
               "Gli altri corsi online",
@@ -173,7 +173,7 @@ export default function Home() {
 
 
           <DiffSec
-            color='green-300'
+            color='g'
             tit='border border-green-200 py-4'
             texts={[
               "Con OJXacademy",
