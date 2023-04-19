@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'OJXacademy.com',
-  description: 'Con OJXacademy imparerai le pricipali tecnologie e tecniche di programmazione utilizzate per lo sviluppo web: Con corsi sia in gruppo che individuali, inizierai in poco tempo a creare i tuoi primi siti web.',
+  description: 'Con OJXacademy imparerai le pricipali tecnologie e tecniche di programmazione utilizzate per lo sviluppo web: Con corsi sia in gruppo che individuali, inizierai in poco tempo a creare i tuoi primi siti web per desktop e mobile!',
   icons: {
     icon: "/icon.png"
   },
@@ -18,6 +18,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html lang="en">
       <body className='text-white'>

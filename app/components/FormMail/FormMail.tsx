@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Loader from "../Loader/Loader"
+import swal from "sweetalert"
 
 interface props {
     classes?: string
@@ -15,7 +16,7 @@ export default function FormMail({ classes }: props) {
 
 
     const send = async () => {
-        if (mail != '' && msg != '') {
+        if (mail != '' && msg != '' && /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
             sl(true)
             await fetch("https://api.emailjs.com/api/v1.0/email/send", {
                 method: "POST",
@@ -36,22 +37,28 @@ export default function FormMail({ classes }: props) {
             })
                 .then(res => {
                     sl(false)
-                    alert("Messaggio inviato con successo. Ti risponderemo per e-mail il prima possibile!")
+                    swal("Messaggio inviato con successo. Ti risponderemo per e-mail il prima possibile!")
                 })
+        }
+        else {
+            if (msg == '')
+                swal("", "Il tuo messaggio non può essere vuoto", "error")
+            else
+                swal("", "Controlla l'indirizzo e-mail inserito", "error")
         }
     }
 
     return (
         <div className={"formmail  flex flex-col items-center gap-1 " + classes}>
-            <div className="tit">
+            <div id="sizereact" className="tit mb-3">
                 Oppure scrivici direttamente qui il tuo messaggio:
             </div>
             <div className="form flex flex-col w-3/6 max-sm:w-5/6 gap-2 text-black">
-                <input className="rounded pl-1" type="text" placeholder="La tua email..." onChange={(e) => smail(e.target.value)} />
-                <textarea className="rounded pl-1 resize-none min-h-[150px]" placeholder="Il tuo messaggio..." onChange={(e) => smsg(e.target.value)} />
+                <input className="text-lg rounded pl-1 outline-none" type="text" placeholder="La tua email..." onChange={(e) => smail(e.target.value)} />
+                <textarea className="text-lg rounded pl-1 resize-none min-h-[150px] outline-none" placeholder="Il tuo messaggio..." onChange={(e) => smsg(e.target.value)} />
             </div>
             <div className="btt">
-                <button onClick={() => send()}>
+                <button className="text-xl text-orange-300 tracking-wider font-semibold  border-2 rounded-md border-orange-300 mt-2 py-1 px-11 transition-all hover:text-white hover:border-white" onClick={() => send()}>
                     {l ?
                         <Loader height="h-4" />
                         :

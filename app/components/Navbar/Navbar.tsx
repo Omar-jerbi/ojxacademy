@@ -1,5 +1,6 @@
 "use client"
 
+import { Underline } from './Underline';
 import { L } from './L';
 import Link from 'next/link'
 import './Navbar.scss'
@@ -9,7 +10,6 @@ export default function Navbar() {
     const { user, setUser } = UseUserContext()
 
     return (
-        // <nav className='grid grid-flow-row grid-cols-12 items-center  fixed top-0 w-full px-2 z-50'>
         <nav className='w-full h-24 flex justify-between items-center fixed top-0 z-50'>
             <div>
                 <Link className={"menu col-span-5"} href={"/"}>
@@ -29,21 +29,21 @@ export default function Navbar() {
                     <>
                         <Link className='menu col-span-2 font-bold text-center' href={"/"}>
                             Home<br className='sm:hidden' /> page
-                            <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+                            <Underline />
                         </Link>
 
                         <div className="col-span-1"></div>
 
                         <Link className='menu col-span-2 font-bold text-center' href={"/Studente/Login"}>
                             Area<br className='sm:hidden' /> studenti
-                            <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+                            <Underline />
                         </Link>
                     </>
                     :
                     <>
                         <div id='menustit' className='menu col-span-2 col-start-6 font-bold text-center relative'>
                             Menus
-                            <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+                            <Underline />
 
                             <div id='menus'
                                 className="hidden absolute flex-col items-start w-max gap-5 pt-3
@@ -51,7 +51,7 @@ export default function Navbar() {
                                 <L route='' userid={user.id} tit='I miei orari' />
                                 <L route='/Lezioni' userid={user.id} tit='Lezioni seguite' />
                                 <L route='/Dati' userid={user.id} tit='I miei dati' />
-                                <Link className='max-sm:text-sm border-b border-transparent hover:border-white' href={"/"} onClick={() => {setUser(""); sessionStorage.removeItem("user")}}>Logout</Link>
+                                <Link className='max-sm:text-sm border-b border-transparent hover:border-white' href={"/"} onClick={() => { setUser(""); sessionStorage.removeItem("user") }}>Logout</Link>
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@ export default function Navbar() {
 
                         <Link className='menu col-span-3 font-bold text-center' href={`/Studente/${user.id}/Pagamenti`}>
                             Pagamenti
-                            <hr className='border-0 bg-gradient-to-l from-transparent via-white to-transparent my-1' style={{ height: "1px" }} />
+                            <Underline />
                         </Link>
                     </>
                 }

@@ -55,7 +55,7 @@
   }
 
   .pres {
-    background-image: url(./bg1.jpg);
+    background-image: url(./bg1.webp);
     background-size: cover;
   }
 
@@ -95,7 +95,21 @@
         scale: 0.8;
       }
     }
+
   }
+
+  @media screen and (max-width:900px) {
+    .goals {
+      background: rgba(255, 68, 0, 0.664) !important;
+
+      #cyancircle,
+      #purplecircle {
+        display: none;
+      }
+    }
+  }
+
+
 
 
   .infos {
