@@ -11,7 +11,7 @@ export default async function ({ params }: props) {
     const user: students = await getUser(params)    
 
     return (
-        <div className="bg-gray-950 text-center py-6 flex flex-col justify-center items-center gap-5 border-2 border-white rounded-md">
+        <div className="bg-gray-950 text-center py-6 px-2 flex flex-col justify-center items-center gap-5 border-2 border-white rounded-md max-sm:mt-36">
             <h1 className="underline">Sezione pagamenti</h1>
             <h2>Il mio ultimo servizio acquistato: <span className="text-yellow-200 font-semibold">{user.schedule ? "Lezioni individuali" : "Lezioni in gruppo"}</span> </h2>
             <hr />

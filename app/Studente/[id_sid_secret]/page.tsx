@@ -10,7 +10,7 @@ export default async function ({ params }: props) {
     const user = await getUser(params)
 
     return (
-        <div className="bg-gray-950 text-center py-6 flex flex-col justify-center items-center gap-5 border-2 border-white rounded-md">
+        <div className="bg-gray-950 text-center py-6 px-3 flex flex-col justify-center items-center gap-5 border-2 border-white rounded-md">
 
             <h1 className="underline">Tipologia lezioni:</h1>
             <h2 className="text-yellow-100 font-semibold">{user.schedule ? "Studente individuale" : "Studente in gruppo"}</h2>
