@@ -59,9 +59,9 @@ export default function Home() {
 
 
       <div className="home goals flex justify-center items-center relative overflow-hidden" style={{ minHeight: "100vh" }}>
-        <article className="wrapper leading-tight w-10/12 mx-auto h-[70vh] relative grid grid-cols-3 gap-5 z-10">
-          <span id='sizereact' className="tit col-span-3 text-center">Alcune delle principali tematiche affrontate nei corsi OJXacademy:</span>
-          <hr className="col-span-3 border-0 outline-none bg-gradient-to-l from-transparent via-white to-transparent" style={{ height: "1px" }} />
+        <article className="wrapper leading-tight w-10/12 mx-auto h-[70vh] relative grid grid-cols-4 gap-5 z-10 max-sm:grid-cols-3">
+          <span id='sizereact' className="tit col-span-4 text-center max-sm:col-span-3">Alcune delle principali tematiche affrontate nei corsi OJXacademy:</span>
+          <hr className="col-span-4 max-sm:col-span-3 border-0 outline-none bg-gradient-to-l from-transparent via-white to-transparent" style={{ height: "1px" }} />
           <div className="shadow-md shadow-slate-900 transition-all hover:scale-105 circle  bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Fondamenta di Html, Css, Js e molto altri</div>
           <div className="shadow-md shadow-slate-900 transition-all hover:scale-105 circle  bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Design di interfacce web responsive</div>
           <div className="shadow-md shadow-slate-900 transition-all hover:scale-105 circle  bg-white py-3 px-3 text-black col-span-1 aspect-square rounded-full flex justify-center items-center max-h-52 text-center max-sm:text-xs lg:mx-auto">Terminologia tecnica</div>
@@ -97,8 +97,8 @@ export default function Home() {
         <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2 gap-7 max-sm:gap-5">
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-center">
-              <div className="tit text-4xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni in gruppo</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>149€</span></div>
-              <div className="val font-semibold text-sm max-sm:text-xs">
+              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni in gruppo</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>149€</span></div>
+              <div id='sizereactS' className="val font-semibold text-sm max-sm:text-xs">
                 Gruppi di 3 persone (+ istruttore)
                 <div className="my-4 max-sm:my-0"></div>
                 Esercizi adeguati alle skills del gruppo
@@ -112,8 +112,8 @@ export default function Home() {
 
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-center">
-              <div className="tit text-4xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni individuali</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>249€</span></div>
-              <div className="val font-semibold text-sm max-sm:text-xs">
+              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni individuali</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>249€</span></div>
+              <div id='sizereactS' className="val font-semibold text-sm max-sm:text-xs">
                 Un solo studente per lezione (+ istruttore)
                 <div className="my-4 max-sm:my-0"></div>
                 Esercizi calibrati su livello individuale
@@ -127,19 +127,16 @@ export default function Home() {
 
           <hr className='col-span-2 border-0 outline-none bg-gradient-to-r from-transparent via-green-900 to-transparent' style={{ height: "1px" }} />
 
-          <div className="col-span-2 text-center font-semibold text-lg max-sm:text-sm">
-            2 lezioni settimanali della durata di 180minuti
+          <div id='sizereactS' className="flex flex-col justify-center col-span-2 text-center font-semibold text-lg max-sm:text-sm border border-green-200 rounded-lg py-2 px-4 w-fit mx-auto">
+            2 lezioni settimanali della durata di 180 minuti
             <div className="my-4 max-sm:my-0"></div>
             Lezioni smart sul canale Discord del corso
             <div className="my-4 max-sm:my-0"></div>
             24 ore di lezione + 4 micro-progetti ogni mese
             <div className="my-4 max-sm:my-0"></div>
-
             <span>Enfasi sull'aspetto pratico dello sviluppo web</span>
             <div className="my-4 max-sm:my-0"></div>
-
-            <span className='underline underline-offset-2 decoration-green-800'>Colloquio introduttivo di 30minuti gratuito</span>
-            <div className="my-4 max-sm:my-0 "></div>
+            <span className='text-green-400'>Colloquio introduttivo di 30minuti gratuito!</span>
           </div>
         </div>
 
@@ -168,7 +165,7 @@ export default function Home() {
               "Unico pagamento di migliaia di euro dopo 1 o 2 anni",
               "Classi di decine di partecipanti e meno attenzione all'individuo",
               "Pesanti penali se decidi di interrompere le lezioni prima di un certo periodo",
-              "Diversi tutor per ogni disciplina"
+              "Tutor diversi per ogni disciplina"
             ]} />
 
 
@@ -177,14 +174,14 @@ export default function Home() {
             tit='border border-green-200 py-4'
             texts={[
               "Con OJXacademy",
-              "Pagamanti contenuti mensili con la possibilità di interrompere o sospendere momentaneamente il servizio quando vuoi",
+              "Pagamanti mensili contenuti con la possibilità di interrompere o sospendere momentaneamente il servizio quando vuoi",
               "Se dopo il primo mese non sei soddisfatto/a, ti rimborsiamo al 100%",
               "Nessuna durata minima richiesta. Quando senti di aver imparato abbastanza sei incoraggiato a lanciarti nel mondo dello sviluppo professionale!",
               "Un unico tutor qualificato ti seguirà per tutto il tuo percorso",
               "Focus solo sulle tecnologie piu influenti e diffuse sul mercato",
               "Non solo codice: imparerai anche tecniche di design digitale, tasks planning e setup di ambienti di lavoro",
               "Percorsi in base alle tue skill e ai tuoi obbiettivi finali",
-              "Facciamo conoscenza prima di iniziare! Prenota il tuo appuntamento virtuale di 30minuti su Google Zoom o Discord per chiederci tutti i dettagli delle lezioni di OJXacademy",
+              "Facciamo conoscenza prima di iniziare! Prenota il tuo appuntamento virtuale di 30minuti su Google Zoom o Discord per chiederci tutte le informazioni che desideri sulle lezioni di OJXacademy",
 
             ]}
           />

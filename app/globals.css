@@ -12,3 +12,6 @@ body {
 #sizereact {
     font-size: max(1.7cqmin, 1rem);
 }
+#sizereactS {
+    font-size: max(1.5cqmin, 0.8rem);
+}

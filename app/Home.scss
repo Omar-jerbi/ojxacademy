@@ -109,7 +109,15 @@
     }
   }
 
-
+  @media screen and (max-width:1100px) and (max-height:800px) {
+    .goals {
+      article {
+        div {
+          height: 150px;
+        }
+      }
+    }
+  }
 
 
   .infos {
@@ -126,6 +134,17 @@
   @keyframes rova {
     to {
       background-size: 100% 100%;
+    }
+  }
+
+  @media screen and (max-width:1100px) and (max-height:800px) {
+    .infos {
+      .tit{
+        font-size: xx-large;        
+      }
+      .my-4{
+        margin: 0;
+      }
     }
   }
 
