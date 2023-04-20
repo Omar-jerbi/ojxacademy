@@ -22,8 +22,8 @@ export default async function ({ params }: props) {
                 <Individual stud={user} sid={user.id} showing={(user.oktochange || user.schedule) ? true : false} />
 
                 <Group stud={user} gid={user.groupId} showing={(user.oktochange || !user.schedule)} />
-
             </div>
+            
 
 
         </div>

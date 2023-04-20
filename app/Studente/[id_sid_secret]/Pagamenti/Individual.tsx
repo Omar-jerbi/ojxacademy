@@ -5,6 +5,7 @@ import { getNM } from "./Group"
 import { useEffect, useState } from "react"
 import { week } from "../Sch"
 import swal from "sweetalert"
+import { useRouter } from "next/navigation"
 
 interface props {
   showing: boolean,
@@ -15,7 +16,7 @@ interface props {
 export default function Individual({ showing, sid, stud }: props) {
   const [nm, snm] = useState<nextmonth>()
   const [s, ss] = useState<week[]>()
-
+  const r = useRouter()
 
   useEffect(() => {
     const f = async () => {
@@ -62,6 +63,9 @@ export default function Individual({ showing, sid, stud }: props) {
           //fai giochetto del route refresh !!! 
 
           swal(stud.name + " paghera con stripe e se aveva un gruppo gli verra rimosso e aggiunto/aggiornato lo schedule personale mostrato")
+            .then(() => {
+              r.refresh()
+            })
         }}
       >
         Vai al pagamento

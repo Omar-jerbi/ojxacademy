@@ -4,6 +4,7 @@ import { nextmonth, students } from "@prisma/client"
 import { useEffect, useState } from "react"
 import { week } from "../Sch"
 import swal from "sweetalert"
+import { useRouter } from "next/navigation"
 
 interface props {
   showing: boolean,
@@ -25,8 +26,8 @@ export const getNM = async (sid: number | null, gid: number | null) => {
 
 export default function Group({ showing, stud, gid }: props) {
   const [nm, snm] = useState<nextmonth>()
-
   const [s, ss] = useState<week[]>()
+  const r = useRouter()
 
   useEffect(() => {
     const f = async () => {
@@ -72,6 +73,9 @@ export default function Group({ showing, stud, gid }: props) {
           })
 
           swal(stud.name + " paghera con stripe, verra ri/assegnato al gruppo " + stud.groupId + " e se aveva uno schedule personale verra rimosso")
+            .then(() => {
+              r.refresh()
+            })
         }}
       >
         Vai al pagamento

@@ -38,14 +38,6 @@ export async function POST(req: Request) {
                 schedule: body.nm.schedule!
             }
         })
-
-        const insrt = await prisma.payments.create({
-            data: {
-                studentId: Number(body.stud.id),
-                monthId: Number(body.nm.id),
-                value: 149
-            }
-        })
     } else {//i to g
         const us = await prisma.students.update({
             where: {
@@ -66,15 +58,15 @@ export async function POST(req: Request) {
                 ignore: true
             }
         })
-
-        const insrt = await prisma.payments.create({
-            data: {
-                studentId: Number(body.stud.id),
-                monthId: Number(body.nm.id),
-                value: 149
-            }
-        })
     }
+
+    const insrt = await prisma.payments.create({
+        data: {
+            studentId: Number(body.stud.id),
+            monthId: Number(body.nm.id),
+            value: 149
+        }
+    })
 
 
     return NextResponse.json(null)
