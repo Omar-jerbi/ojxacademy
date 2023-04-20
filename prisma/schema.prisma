@@ -23,7 +23,7 @@ model students {
   email      String
   pw         String
   groupId    Int?
-  oktochange Boolean? @default(false)////////////
+  oktochange Boolean? @default(false) ////////////
 
   lessons   lessons[]
   payments  payments[]
@@ -37,12 +37,11 @@ model payments {
   value     Decimal
   date      DateTime @default(now())
   studentId Int
- 
 
   student students @relation(fields: [studentId], references: [id])
 
   monthId Int
-  month nextmonth @relation(fields: [monthId], references: [id])
+  month   nextmonth @relation(fields: [monthId], references: [id])
 }
 
 model nextmonth {
@@ -50,12 +49,13 @@ model nextmonth {
   schedule Json?
   from     DateTime @default(now())
   to       DateTime @default(now())
+  ignore   Boolean  @default(false)
 
   single_studentId Int?
   single_student   students? @relation(fields: [single_studentId], references: [id])
 
   groupsId Int?
-  group    groups?    @relation(fields: [groupsId], references: [id])
+  group    groups? @relation(fields: [groupsId], references: [id])
 
   payments payments[]
 }

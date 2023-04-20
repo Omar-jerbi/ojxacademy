@@ -18,7 +18,7 @@ export function DiffSec({ texts, color, tit }: props) {
                     return (
                         <div key={k} className={(color == 'w' ? "text-white" : "text-green-300") + " flex flex-col items-center text-center"}>
                             {t}
-                            <hr className={`border-0 outline-none w-1/12 min-w-[60px] my-2 bg-gradient-to-r from-transparent via-${color} to-transparent`} style={{ height: "1px" }} />
+                            <hr className={`border-0 outline-none w-1/12 min-w-[60px] my-2 bg-gradient-to-r from-transparent ${(color == 'w' ? "via-white" : "via-green-300")} to-transparent lg:w-1/2 lg:my-5`} style={{ height: "1px" }} />
                         </div>
                     )
             })

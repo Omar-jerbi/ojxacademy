@@ -9,14 +9,32 @@ export async function POST(req: Request) {
         where: {
             OR: [
                 {
-                    single_studentId: {
-                        equals: body.sid
-                    }
+                    AND: [
+                        {
+                            single_studentId: {
+                                equals: Number(body.sid)
+                            }
+                        },
+                        {
+                            ignore: {
+                                equals: false
+                            }
+                        }
+                    ]
                 },
                 {
-                    groupsId: {
-                        equals: body.gid
-                    }
+                    AND: [
+                        {
+                            groupsId: {
+                                equals: Number(body.gid)
+                            },
+                        },
+                        {
+                            ignore: {
+                                equals: false
+                            }
+                        }
+                    ]
                 }
             ]
         }

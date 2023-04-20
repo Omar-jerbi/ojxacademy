@@ -32,7 +32,7 @@ export default function Group({ showing, stud, gid }: props) {
     const f = async () => {
       const x: nextmonth = await getNM(0, gid)
       snm(x)
-      ss(JSON.parse(JSON.stringify(x?.schedule)))
+      ss(JSON.parse(JSON.stringify(x?.schedule) ?? "[]"))
     }
 
     f()
@@ -64,7 +64,15 @@ export default function Group({ showing, stud, gid }: props) {
 
       <button
         className="border border-slate-300 py-2 px-4 rounded hover:bg-slate-400 transition-colors"
-        onClick={() => swal(stud.name + " paghera con stripe, verra ri/assegnato al gruppo "+ stud.groupId + " e se aveva uno schedule personale verra rimosso")}
+        onClick={async () => {
+          await fetch(process.env.NEXT_PUBLIC_API_URL + "api/Payments/ChangeType/ToG", {
+            method: "POST",
+            body: JSON.stringify({ stud: stud, nm: nm }),
+            cache: "no-cache"
+          })
+
+          swal(stud.name + " paghera con stripe, verra ri/assegnato al gruppo " + stud.groupId + " e se aveva uno schedule personale verra rimosso")
+        }}
       >
         Vai al pagamento
       </button>
