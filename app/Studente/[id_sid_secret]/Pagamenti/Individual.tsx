@@ -49,7 +49,7 @@ export default function Individual({ showing, sid, stud }: props) {
 
       <hr className="border-0 outline-none bg-slate-600 w-1/2 my-5" style={{ height: "1px" }} />
 
-      <div className="tit mb-4">Totale: <span className="font-semibold text-slate-300 underline">249.00€</span></div>
+      <div className="tit mb-4">Totale: <span className="font-semibold text-slate-300 underline">179.00€</span></div>
 
       <button
         className="border border-slate-300 py-2 px-4 rounded hover:bg-slate-400 transition-colors"

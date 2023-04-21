@@ -97,7 +97,7 @@ export default function Home() {
         <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2 gap-7 max-sm:gap-5">
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-center">
-              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni in gruppo</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>149€</span></div>
+              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni in gruppo</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>99€</span></div>
               <div id='sizereactS' className="val font-semibold text-sm max-sm:text-xs">
                 Gruppi di 3 persone (+ istruttore)
                 <div className="my-4 max-sm:my-0"></div>
@@ -112,7 +112,7 @@ export default function Home() {
 
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-center">
-              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni individuali</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>249€</span></div>
+              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni individuali</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>179€</span></div>
               <div id='sizereactS' className="val font-semibold text-sm max-sm:text-xs">
                 Un solo studente per lezione (+ istruttore)
                 <div className="my-4 max-sm:my-0"></div>
@@ -205,7 +205,7 @@ export default function Home() {
 
 
 
-      <div id='cont' className="home contacts bg-zinc-950 flex justify-center items-center max-sm:pt-20" style={{ minHeight: "100vh" }}>
+      <div id='cont' className="home contacts relative bg-zinc-950 flex justify-center items-center max-sm:pt-20" style={{ minHeight: "100vh" }}>
         <div className="wrapper w-10/12 mx-auto h-[80vh] relative rounded-lg drop-shadow-md">
           <div className="flex flex-col justify-around items-center w-full mx-auto h-full">
 
@@ -222,6 +222,10 @@ export default function Home() {
           </div>
 
         </div>
+
+        <footer className='text-white absolute bottom-3 left-3 text-sm'>
+          OJXacademy 2023  -  P.IVA: 01879540092 
+        </footer>
       </div>
 
 
