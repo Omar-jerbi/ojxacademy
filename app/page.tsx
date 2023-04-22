@@ -36,7 +36,7 @@ export default function Home() {
           </div>
 
           <div className="transition-all hover:z-10 hover:scale-105 drop-shadow-md rounded-md second w-4/6 h-[40vh] border-2 border-white bg-black text-white absolute bottom-0 right-0 flex justify-center items-center overflow-y-auto py-3 px-3 max-sm:items-start">
-            <label  id='sizereact'>
+            <label id='sizereact'>
               Oltre alle lezioni, ti verranno assegnati periodicamente progetti inerenti ai temi
               appresi durante il corso. La realizzazione di questi progetti ti aiuterà a consolidare ulteriormente le tue competenze da sviluppatore web.
               <br />
@@ -94,40 +94,38 @@ export default function Home() {
 
 
       <article className="home infos relative flex justify-center items-center bg-gradient-to-t from-transparent from-0% to-gray-900 to-55%" style={{ minHeight: "100vh" }}>
-        <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2 gap-7 max-sm:gap-5">
-          <div className="col-span-1 max-lg:col-span-2">
-            <div className="text-center">
-              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni in gruppo</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>99€</span></div>
-              <div id='sizereactS' className="val font-semibold text-sm max-sm:text-xs">
-                Gruppi di 3 persone (+ istruttore)
-                <div className="my-4 max-sm:my-0"></div>
-                Esercizi adeguati alle skills del gruppo
-                <div className="my-4 max-sm:my-0"></div>
-                Orari delle lezioni da concordare insieme agli altri membri
-                <div className="my-4 max-sm:my-0"></div>
-                Consigliato a chi ha già una minima esperienza di programmazione e vuole apprendere nuove skills
+        <div className="wrapper w-10/12 mx-auto h-[70vh] relative grid grid-cols-2">
+
+
+          <div className="col-span-1 flex flex-col max-sm:h-[50vh] max-sm:overflow-scroll max-sm:border-r">
+            <hr className='border-0 bg-slate-50 h-1 w-1/2 mb-2' />
+            <div className="text">
+              <div className="text-4xl font-semibold mb-10 max-sm:text-lg max-sm:mb-2">Lezioni in gruppo <span className='text-green-400'>99€</span></div>
+              <div className="val font-normal text-2xl max-sm:text-sm flex flex-col gap-6 pl-3 max-sm:pl-0 tracking-wider">
+                <div className="">Gruppi di 4 persone (+ istruttore)</div>
+                <div className="">Esercizi adeguati alle skills del gruppo</div>
+                <div className="">Orari delle lezioni da concordare insieme agli altri membri</div>
+                <div className="">Consigliato a chi ha già esperienza di programmazione <br /> e vuole apprendere nuove skills</div>
               </div>
             </div>
           </div>
 
-          <div className="col-span-1 max-lg:col-span-2">
-            <div className="text-center">
-              <div className="tit text-5xl font-semibold my-4 max-sm:text-lg"><span className='align-sub'>Lezioni individuali</span><span id='price' className='font-thin underline text-green-500 align-super text-3xl max-sm:text-base'>179€</span></div>
-              <div id='sizereactS' className="val font-semibold text-sm max-sm:text-xs">
-                Un solo studente per lezione (+ istruttore)
-                <div className="my-4 max-sm:my-0"></div>
-                Esercizi calibrati su livello individuale
-                <div className="my-4 max-sm:my-0"></div>
-                Maggiore flessibilita negli orari delle lezioni
-                <div className="my-4 max-sm:my-0"></div>
-                Consigliato a chi si approccia per la primissima volta al mondo della programmazione
+
+
+          <div className="col-span-1 flex flex-col items-end max-sm:h-[50vh] max-sm:overflow-scroll max-sm:items-start">
+            <hr className='border-0 bg-slate-50 h-1 w-1/2 mb-2' />
+            <div className="text text-end max-sm:text-start">
+              <div className="text-4xl font-semibold mb-10 max-sm:text-lg max-sm:mb-2">Lezioni individuali <span className='text-green-400'>179€</span></div>
+              <div className="val font-normal text-2xl max-sm:text-sm flex flex-col gap-6 pr-3  tracking-wider">
+                <div className="">Un solo studente per lezione (+ istruttore)</div>
+                <div className="">Esercizi calibrati su livello individuale</div>
+                <div className="">Maggiore flessibilita negli orari delle lezioni</div>
+                <div className="">Consigliato a chi si approccia per la primissima <br /> volta al mondo della programmazione</div>
               </div>
             </div>
           </div>
 
-          <hr className='col-span-2 border-0 outline-none bg-gradient-to-r from-transparent via-green-900 to-transparent' style={{ height: "1px" }} />
-
-          <div id='sizereactS' className="flex flex-col justify-center col-span-2 text-center font-semibold text-lg max-sm:text-sm border border-green-200 rounded-lg py-2 px-4 w-fit mx-auto">
+          <div className="col-span-2 flex flex-col justify-center text-center text-2xl font-semibold tracking-widest w-fit mx-auto max-sm:text-xs max-sm:border-t max-sm:mt-5">
             2 lezioni settimanali della durata di 180 minuti
             <div className="my-4 max-sm:my-0"></div>
             Lezioni smart sul canale Discord del corso
@@ -138,6 +136,7 @@ export default function Home() {
             <div className="my-4 max-sm:my-0"></div>
             <span className='text-green-400'>Colloquio introduttivo di 30minuti gratuito!</span>
           </div>
+
         </div>
 
         <span className='text-center text-zinc-100/20 underline underline-offset-2 leading-8 flex flex-col justify-center items-center gap-1 absolute bottom-1 w-9/12'>
@@ -224,7 +223,7 @@ export default function Home() {
         </div>
 
         <footer className='text-white absolute bottom-3 left-3 text-sm'>
-          OJXacademy 2023  -  P.IVA: 01879540092 
+          OJXacademy 2023  -  P.IVA: 01879540092
         </footer>
       </div>
 

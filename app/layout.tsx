@@ -9,11 +9,20 @@ export const metadata = {
   title: "OJXacademy | Impara l'arte dello sviluppo web!",
   description: 'Con OJXacademy imparerai le pricipali tecnologie e tecniche di programmazione utilizzate per lo sviluppo web: Con corsi sia in gruppo che individuali, inizierai in poco tempo a creare i tuoi primi siti web per desktop e mobile!',
   icons: {
-    icon: "/_next/static/media/favicon.1d647803.png"
+    icon: "/_next/static/media/favicon.1d647803.png",
+    shortcut: "/_next/static/media/favicon.1d647803.png"
   },
-  keywords: ["ojxacademy", 'sviluppo web', "corso sviluppo web", "javascript", "programmazione", "html", "css", "react"],
+  keywords: ["corso programmazione", 'corso sviluppo web', "corso sviluppo web", "programmazione", "html", "css", "cos'è un framework?"],
   authors: [{ name: "OmarJ", url: "https://github.com/Omar-jerbi" }],
-  category: "sviluppo web"
+  category: "sviluppo web",
+  openGraph: {
+    title: "OJXacademy",
+    description: 'Con OJXacademy imparerai le pricipali tecnologie e tecniche di programmazione utilizzate per lo sviluppo web: Con corsi sia in gruppo che individuali, inizierai in poco tempo a creare i tuoi primi siti web per desktop e mobile!',
+    url: "https://ojxacademy.com",
+    siteName: "OJXacademy.com",
+    type: "website",
+    locale: "it-IT"
+  }
 }
 
 export default function RootLayout({
